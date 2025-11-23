@@ -5,10 +5,13 @@ resources:
 - repo: self
 
 variables:
+  
   azureServiceConnection: 'AzureConnection'
+  
+  dockerRegistryConnection: 'AcrConnection'
+  
   acrName: 'acrmentorai556653'            
   webAppName: 'app-mentorai-556653'       
-  
   imageRepository: 'mentorai-api'
   dockerfilePath: '$(Build.SourcesDirectory)/dockerfiles/Dockerfile'
   tag: '$(Build.BuildId)'
@@ -29,7 +32,7 @@ stages:
         command: buildAndPush
         repository: $(imageRepository)
         dockerfile: $(dockerfilePath)
-        containerRegistry: $(azureServiceConnection)
+        containerRegistry: $(dockerRegistryConnection) 
         tags: |
           $(tag)
           latest
