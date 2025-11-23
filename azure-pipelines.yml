@@ -32,7 +32,8 @@ stages:
         command: buildAndPush
         repository: $(imageRepository)
         dockerfile: $(dockerfilePath)
-        containerRegistry: $(dockerRegistryConnection) 
+        containerRegistry: $(dockerRegistryConnection)
+        buildContext: '$(Build.SourcesDirectory)'
         tags: |
           $(tag)
           latest
