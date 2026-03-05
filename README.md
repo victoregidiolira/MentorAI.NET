@@ -1,36 +1,30 @@
+# 🧠 MentorAI: Recomendação de Cursos & Reskilling API
 
-# 📘 MentorAI — Plataforma de Recomendação e Gestão de Aprendizado  
-### *Global Solution – FIAP | 2025*
+Uma API RESTful desenvolvida em .NET 8, conteinerizada e estruturada para implantação automatizada na nuvem via Azure DevOps.
 
----
+## 📘 Contexto do Negócio
+Projeto desenvolvido para a Global Solution (FIAP 2025) sob o tema "O Futuro do Trabalho". O MentorAI atua como um motor de recomendação inteligente, mapeando o perfil e as habilidades do usuário para sugerir trilhas de capacitação (upskilling e reskilling), conectando profissionais às demandas reais do mercado.
 
-## 👥 **Integrantes do Grupo**
-| Nome | RM |
-|------|------|
-| **Caetano Matos Penafiel** | **557984** |
-| **Kauã Fermino Zipf** | **558957** |
-| **Victor Egídio Lira** | **556653** |
+## ⚙️ Arquitetura e Fluxo de CI/CD
+Este projeto vai além do código, englobando a esteira completa de entrega contínua (DevOps Culture):
+1. **Push & Build:** O código gerado é versionado e testado.
+2. **Containerization:** A aplicação .NET é empacotada em uma imagem Docker.
+3. **Registry:** A imagem é enviada para o Azure Container Registry (ACR).
+4. **Deploy Automático:** O Web App for Containers (Azure) consome a imagem mais recente e expõe os endpoints atualizados.
 
----
+## 🚀 Tecnologias e Ecossistema
 
-🧠 MentorAI – Recomendação de Cursos com IA
-Global Solution FIAP – O Futuro do Trabalho
+| Camada | Tecnologia |
+| :--- | :--- |
+| **Backend / API** | C# (.NET 8), ASP.NET Core Web API |
+| **Banco de Dados** | Oracle DB |
+| **ORM** | Entity Framework Core |
+| **Infra & Containers** | Docker |
+| **Cloud Computing** | Azure (Container Registry + Web App for Containers) |
+| **Automação / Esteira** | Azure DevOps Pipelines |
+| **IaC (Provisionamento)** | Azure CLI |
 
-API em .NET 8 • Oracle • Docker • Azure DevOps • Web App for Containers
-
-📘 Sobre o Projeto
-
-O MentorAI é uma solução desenvolvida para a Global Solution da FIAP no tema O Futuro do Trabalho.
-O objetivo é fornecer recomendações inteligentes de cursos para profissionais que desejam evoluir suas habilidades (upskilling e reskilling).
-
-Esta API em .NET 8 oferece os recursos de cadastro de usuários, habilidades, cursos e sugestões personalizadas com base no perfil do usuário.
-
-🚀 Tecnologias Utilizadas
-Área	Tecnologia
-Backend	.NET 8 (C#), ASP.NET Core Web API
-Banco de Dados	Oracle
-ORM	Entity Framework Core
-DevOps	Azure DevOps Pipelines
-Container	Docker
-Cloud	Azure Container Registry + Web App for Containers
-IaC Simplificado	Azure CLI
+## 👥 Equipe de Engenharia
+* **Victor Egídio Lira** (RM 556653) - *Desenvolvimento Cloud Infra*
+* **Caetano Matos Penafiel** (RM 557984)
+* **Kauã Fermino Zipf** (RM 558957)
